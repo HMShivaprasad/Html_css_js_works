@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="drone_anmi.css">
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+    <div id="banner">
+     <div class="drone"> 
+        <img src="drone.png" alt="" class="drone_pic">
+        <img src="drone-left.png" alt="" class="drone_leftpic">
+        <img src="drone-right.png" alt="" class="drone_rightpic">
+
+     </div>
+    </div>
+<script>
+    $('#banner').mousemove(function(e){
+        var moveX = (e.pageX * -1/2)+300;
+        var moveY =(e.pageY * -1/3)+120;
+        $('.drone').css({
+            'transform': 'translate3d('+moveX+'px,'+moveY+'px,0)'
+        });
+    });
+</script>
+</body>
+</html>
